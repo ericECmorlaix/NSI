@@ -1,0 +1,123 @@
+
+site_name: "Présentation NSI"
+site_url: https://ericECmorlaix.github.io/NSI
+repo_url: https://github.com/ericECmorlaix/NSI # Ajoute l'icone et le lien vers le dépot GitHub en haut à droite
+edit_uri: edit/main/docs/
+site_description: Présentation de la spécialité Numérique et Sciences Informatique
+docs_dir: docs
+
+# Menu de navigation
+nav:
+  - Accueil : index.md 
+
+
+theme:
+  name: material
+  custom_dir: overrides
+  font: false # RGPD ; pas de fonte Google
+  language: fr # français
+  logo: https://ericecmorlaix.github.io/img/logo.svg
+  favicon: https://ericecmorlaix.github.io/img/logo.svg
+  
+  features:  
+    - navigation.instant
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - header.autohide
+
+  palette: # Palettes de couleurs jour/nuit
+    
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: orange
+      accent: purple
+      toggle:
+        icon: material/weather-sunny
+        name: Basculer en mode sombre
+
+    
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: purple
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: Basculer en mode clair
+  
+
+markdown_extensions:
+  - meta
+  - abbr
+  - def_list # listes de définition.
+  - attr_list # un peu de CSS et des attributs HTML.
+  - footnotes # notes[^1] de bas de page.  [^1]: ma note.
+  - admonition # blocs colorés  !!! info "ma remarque"
+  - pymdownx.details # detail qui peuvent se plier/déplier.  
+  - pymdownx.caret # ^^souligné^^, ^exposant^.
+  - pymdownx.mark # ==surligné==.
+  - pymdownx.tilde # ~~barré~~ ou en ~indice~
+  - pymdownx.highlight # coloration syntaxique du code
+  - pymdownx.inlinehilite # pour  `#!python  <python en ligne>
+  - pymdownx.snippets # inclusion de fichiers externe
+      
+  - pymdownx.tasklist: # cases à cocher  - [ ]  et - [x]
+      custom_checkbox:  false   #   avec cases d'origine
+      clickable_checkbox: true  #   et cliquables.
+  - pymdownx.tabbed # volets glissants.  === "Mon volet"
+  - pymdownx.superfences: # imbrication de blocs.
+      preserve_tabs: true
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format 
+  - pymdownx.keys:  # touches du clavier.  ++ctrl+d++
+        separator: "\uff0b"
+  - pymdownx.emoji: # Émojis  :boom:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  
+  #- pymdownx.betterem:
+  #    smart_enable: all
+  
+  - pymdownx.arithmatex:
+      generic: true
+      smart_dollar: false
+  - toc:
+      permalink: ⚓
+      toc_depth: 3
+
+
+plugins:
+  - search
+  - macros
+  - mermaid2
+  - mkdocs-jupyter:
+      kernel_name: python3
+      execute: False
+      include_source: True
+
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:eric.madec@ecmorlaix.fr
+      name: Pour toute question, suggestion ou commentaire, écrire à l'auteur
+    - icon: fontawesome/brands/github
+      link: https://github.com/ericECmorlaix/NSI
+      name: dépôt github
+    - icon: fontawesome/solid/university
+      link: https://www.ecmorlaix.fr/nos-etablissements/lycee-notre-dame-du-mur/
+      name: Lycée Notre Dame du Mur
+  
+  
+  
+copyright: Document partagé par <a href="https://github.com/ericECmorlaix" target="_blank">Eric MADEC</a> &copy; 2021 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a>
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
