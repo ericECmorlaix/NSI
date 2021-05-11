@@ -1,14 +1,17 @@
 
-site_name: "Présentation NSI"
-site_url: https://ericECmorlaix.github.io/NSI
-repo_url: https://github.com/ericECmorlaix/NSI # Ajoute l'icone et le lien vers le dépot GitHub en haut à droite
+site_name: "Mon site avec MkDocs"
+site_url: https://ericECmorlaix.github.io/monTestGitHubMkDocs
+repo_url: https://github.com/ericECmorlaix/monTestGitHubMkDocs # Ajoute l'icone et le lien vers le dépot GitHub en haut à droite
 edit_uri: edit/main/docs/
-site_description: Présentation de la spécialité Numérique et Sciences Informatique
+site_description: Base expérimentale de travail avec MkDocs à ma sauce
 docs_dir: docs
 
 # Menu de navigation
 nav:
-  - Accueil : index.md 
+  - Accueil : index.md
+  - MarkDown MkDocs : markdown.md
+  - MarkDown Jupyter : MarkDown-Le_BN_pour_rapporter.ipynb
+  - Python : python_script.py
 
 
 theme:
@@ -104,7 +107,7 @@ extra:
       link: mailto:eric.madec@ecmorlaix.fr
       name: Pour toute question, suggestion ou commentaire, écrire à l'auteur
     - icon: fontawesome/brands/github
-      link: https://github.com/ericECmorlaix/NSI
+      link: https://github.com/ericECmorlaix/monTestGitHubMkDocs
       name: dépôt github
     - icon: fontawesome/solid/university
       link: https://www.ecmorlaix.fr/nos-etablissements/lycee-notre-dame-du-mur/
